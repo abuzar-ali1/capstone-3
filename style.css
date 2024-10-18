@@ -130,17 +130,33 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.deadline-bg{
-    background-image: url(./imges/h5-bg-countdown1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 90px 0px;
+.deadline-bg {
+  background-image: url(./imges/h5-bg-countdown1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 0px;
 }
-.bg-set-color-2{
+.bg-set-color-2 {
   background-color: #ff6924;
-
 }
-.border-set{
-    border: dashed 1px white;
+.border-set {
+  border: dashed 1px white;
+}
+.bg-color {
+  background: rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+
+.bg-color-change:hover .bg-color {
+  background-color: black;
+}
+.bg-color-change:hover .features {
+  color: white;
+}
+.dot-hover:hover{
+    color: #ff6924;
+    transition: all 0.5s; 
+    cursor: pointer;
 }
