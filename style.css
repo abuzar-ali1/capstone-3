@@ -172,3 +172,10 @@
   transition: all 0.5s;
   cursor: pointer;
 }
+.bg-image{
+background-image: url(./imges/bg-footer.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
