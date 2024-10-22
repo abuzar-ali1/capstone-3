@@ -327,38 +327,41 @@
             <h1 class="heading4 text-black fs-4 fw-medium">
               Log in to Your Account
             </h1>
-            <div
-              class="my-3 d-flex align-items-center justify-content-between border px-3"
-            >
-              <span class="color-2 pe-3 fs-5 border-end"
-                ><iconify-icon icon="mdi:account" noobserver></iconify-icon
-              ></span>
-              <input
-                class="w-100 border-0 p-2"
-                placeholder="Username"
-                type="text"
-              />
-            </div>
-            <div
-              class="d-flex align-items-center justify-content-between border my-3 px-3"
-            >
-              <span class="color-2 pe-3 fs-5 border-end"
-                ><iconify-icon icon="uim:lock" noobserver></iconify-icon
-              ></span>
-              <input
-                class="w-100 border-0 p-2"
-                placeholder="Password"
-                type="password"
-              />
-            </div>
-            <div class="my-3">
+            <form id="logIn-details">
+              <div
+                class="my-3 d-flex align-items-center justify-content-between border px-3"
+              >
+                <span class="color-2 pe-3 fs-5 border-end"
+                  ><iconify-icon icon="mdi:account" noobserver></iconify-icon
+                ></span>
+                <input
+                id="user-name"
+                  class="w-100 border-0 p-2"
+                  placeholder="Username"
+                  type="text"
+                />
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between border my-3 px-3"
+              >
+                <span class="color-2 pe-3 fs-5 border-end"
+                  ><iconify-icon icon="uim:lock" noobserver></iconify-icon
+                ></span>
+                <input
+                id="user-password"
+                  class="w-100 border-0 p-2"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+
               <button
-                type="button"
-                class="w-100 nav-bg btn-set-5 nav-bg btn text-white fw-bold rounded-pill"
+                type="submit"
+                class="w-100 my-3 nav-bg btn-set-5 nav-bg btn text-white fw-bold rounded-pill"
               >
                 Log In
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -377,23 +380,25 @@
         <div class="col-lg-6 d-none d-lg-block">
           <img class="img-fluid" src="./../../imges/sign-in-img.png" alt="" />
         </div>
-        <div class="d-flex justify-content-center col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-         <div class="py-2">
-          <h1 class="fw-bold fs-3 heading4 mt-5 text-white">
-            Subscribe to our Newsletter:
-          </h1>
-          <input
-            class="heading4 bg-input w-50 border-0 border-bottom border-white text-white p-2"
-            placeholder="Type your mail address..."
-            type="text"
-          />
-          <button
-            type="button"
-            class="btn-set-2 btn-set-5 btn text-white fw-bold rounded-pill"
-          >
-            Subscribe ->
-          </button>
-         </div>
+        <div
+          class="d-flex justify-content-center col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6"
+        >
+          <div class="py-2">
+            <h1 class="fw-bold fs-3 heading4 mt-5 text-white">
+              Subscribe to our Newsletter:
+            </h1>
+            <input
+              class="heading4 bg-input w-50 border-0 border-bottom border-white text-white p-2"
+              placeholder="Type your mail address..."
+              type="text"
+            />
+            <button
+              type="button"
+              class="btn-set-2 btn-set-5 btn text-white fw-bold rounded-pill"
+            >
+              Subscribe ->
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -534,17 +539,17 @@
                     <img class="w-100" src="./../../imges/insta3.jpg" alt="" />
                   </div>
                 </div>
-              <div class="d-flex justify-content-center">
-                <div class="nav-item mb-2">
-                  <img class="w-100" src="./../../imges/insta4.jpg" alt="" />
+                <div class="d-flex justify-content-center">
+                  <div class="nav-item mb-2">
+                    <img class="w-100" src="./../../imges/insta4.jpg" alt="" />
+                  </div>
+                  <div class="nav-item mb-2">
+                    <img class="w-100" src="./../../imges/insta5.jpg" alt="" />
+                  </div>
+                  <div class="nav-item mb-2">
+                    <img class="w-100" src="./../../imges/insta6.jpg" alt="" />
+                  </div>
                 </div>
-                <div class="nav-item mb-2">
-                  <img class="w-100" src="./../../imges/insta5.jpg" alt="" />
-                </div>
-                <div class="nav-item mb-2">
-                  <img class="w-100" src="./../../imges/insta6.jpg" alt="" />
-                </div>
-              </div>
               </div>
             </div>
           </footer>
@@ -583,5 +588,6 @@
       </div>
       <div class="offcanvas-body">...</div>
     </div>
+    <script src="./logIn.js"></script>
   </body>
 </html>
