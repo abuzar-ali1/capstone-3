@@ -74,7 +74,7 @@
   color: #010148;
 }
 
-.features span {
+.color-3{
   color: #ff6924;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .my-container:hover:hover .overlay {
-  height: 20%;
+  height: 15%;
 }
 
 .text {
@@ -184,6 +184,7 @@
 }
 .btn-set-5 {
   background-color: #5fa232 !important;
+  color: white;
 }
 .bg-col {
   background-color: #f5f5f5;

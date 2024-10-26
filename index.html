@@ -64,9 +64,9 @@
       </div>
     </section>
     <!-- header -->
-    <div class="">
-      <nav class="container navbar navbar-expand-lg bg-white">
-        <div class="container">
+    <div class="position-sticky top-0 z-3 shadow">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-xl container-xxl">
           <a class="navbar-brand" href="#"
             ><img class="logo" src="./imges/logo-mobile.png" alt=""
           /></a>
@@ -206,7 +206,12 @@
                   noobserver
                 ></iconify-icon
               ></span>
-              <span class="fs-4 mx-3 account-icon"
+              <span
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                class="fs-4 mx-3 account-icon"
                 ><iconify-icon icon="bi:cart2" noobserver></iconify-icon
               ></span>
               <span class="fs-4 account-icon"
@@ -223,7 +228,7 @@
 
     <!-- hero section -->
     <section class="bg-setting">
-      <div class="container">
+      <div class="container-xl container-xxl">
         <div class="row">
           <div class="col-12">
             <h1 class="text-white fw-bold text-center f-size">
@@ -270,7 +275,7 @@
       </p>
 
       <section class="margin-set">
-        <div class="container">
+        <div class="container-xl container-xxl">
           <div class="row">
             <div class="p-4 col-12 col-sm-12 col-md-4 col-lg-4">
               <div class="border cart-set px-3 py-4 mb-5 rounded">
@@ -450,7 +455,7 @@
         </div>
       </section>
     </section>
-    <section class="container margin-set">
+    <section class="container-xl container-xxl margin-set">
       <div class="bg-set-2 rounded w-100">
         <p class="features text-center text-white fs-2 fw-bold">
           Start from <span> $39.99</span>
@@ -470,7 +475,7 @@
     </section>
 
     <!-- Trending products -->
-    <section class="margin-set container">
+    <section class="margin-set container-xl container-xxl">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
           <div class="">
@@ -489,7 +494,7 @@
           class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column justify-content-end"
         >
           <div class="row d-flex justify-content-between">
-            <button type="button" class="col-3 btn-set-3 btn fw-bold">
+            <button type="button" class="col-3 btn-set-5 btn fw-bold">
               All products
             </button>
             <button type="button" class="col-2 btn-set-3 btn fw-bold">
@@ -509,7 +514,7 @@
       </div>
     </section>
     <!-- products -->
-    <section class="container">
+    <section class="container-xl container-xxl">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
@@ -520,10 +525,16 @@
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Fresh Orange <br />
-                <span>$12.00 – $65.00 </span>
-              </h1>
+              <div>
+                <h1 class="fs-6 text-center features heading1 fw-bold">
+                  Fresh Orange
+                </h1>
+
+                <p class="fs-6 text-center pb-4 color-3 heading1 fw-bold">
+                  <s> $12.00</s>
+                  <span class="features">$8.00</span>
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
@@ -542,24 +553,32 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 2.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Red Apple Envy
-                <br />
-                <span
-                  ><s> $24.00</s> <span class="text-black">$18.00</span>
-                </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Red Apple Envy
+                </h1>
+
+                <p class="fs-6 text-center pb-4 color-3 heading1 fw-bold">
+                  <s> $24.00</s>
+                  <span id="product-prize" class="text-black">$18.00</span>
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , productName , 18)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -573,22 +592,34 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 3.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Green Bow
-                <br />
-                <span>$4.00 </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Green Brow
+                </h1>
+
+                <p
+                  id="product-prize"
+                  class="fs-6 text-center pb-4 color-3 heading1 fw-bold"
+                >
+                  $4.00
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Green Bro' , 4)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -602,22 +633,34 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 4.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Organic Lemon
-                <br />
-                <span>$12.00 </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Organic Lemon
+                </h1>
+
+                <p
+                  id="product-prize"
+                  class="fs-6 text-center pb-4 color-3 heading1 fw-bold"
+                >
+                  $12.00
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Organic Lemon' , 12)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -631,24 +674,32 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 5.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Organic Carrot
-                <br />
-                <span
-                  ><s> $12.00</s> <span class="text-black">$8.00</span>
-                </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Organic Carrot
+                </h1>
+
+                <p class="fs-6 text-center pb-4 color-3 heading1 fw-bold">
+                  <s> $12.00</s>
+                  <span id="product-prize" class="features">$8.00</span>
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Organic Carrot' , 8)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -662,24 +713,32 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 6.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Organic Cabbage
-                <br />
-                <span
-                  ><s> $30.00</s> <span class="text-black">$22.00</span>
-                </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Organic Cabbage
+                </h1>
+
+                <p class="fs-6 text-center pb-4 color-3 heading1 fw-bold">
+                  <s> $30.00</s>
+                  <span id="product-prize" class="features">$22.00</span>
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Organic Cabbage' , 22)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -693,22 +752,34 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
+              id="product-img"
               src="./imges/product 7.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Organic Potato
-                <br />
-                <span>$4.00</span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Organic Potato
+                </h1>
+
+                <p
+                  id="product-prize"
+                  class="fs-6 text-center pb-4 color-3 heading1 fw-bold"
+                >
+                  $4.00
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Organic Potato' , 4)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -722,24 +793,32 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
             <img
-              src="./imges/product 1.png"
+              id="product-img"
+              src="./imges/product 8.png"
               alt="Avatar"
               class="bg-img-color image d-block h-auto img-fluid"
             />
 
             <div class="img-fluid p-3 border">
-              <h1 class="fs-6 text-center pb-5 features heading1 fw-bold">
-                Organic Peas
-                <br />
-                <span
-                  ><s> $10.00</s> <span class="text-black">$6.00</span>
-                </span>
-              </h1>
+              <div>
+                <h1
+                  id="product-name"
+                  class="fs-6 text-center features heading1 fw-bold"
+                >
+                  Organic Peas
+                </h1>
+
+                <p class="fs-6 text-center pb-4 features heading1 fw-bold">
+                  <s> $10.00</s>
+                  <span id="product-prize" class="features color-3">$6.00</span>
+                </p>
+              </div>
               <div
                 class="overlay position-absolute start-0 end-0 bottom-0 bg-white overflow-hidden w-100"
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
+                    onclick="addToCart(productImg , 'Organic Peas', 6)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -822,7 +901,7 @@
         </p>
       </div>
 
-      <section class="container">
+      <section class="container-xl container-xxl">
         <div class="row">
           <div
             class="p-2 col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 rounded"
@@ -994,7 +1073,7 @@
 
     <!-- Clients reviews -->
     <section class="review-bg p-3">
-      <div class="row container">
+      <div class="row container-xl container-xxl">
         <div
           class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-end"
         >
@@ -1043,7 +1122,7 @@
     </section>
 
     <!-- News and Blogs  -->
-    <section class="margin-set container">
+    <section class="margin-set container-xl container-xxl">
       <div>
         <div class="bg-img">
           <h1 class="text-center pb-5 features heading1 fw-bold">
@@ -1326,6 +1405,29 @@
         <div class="d-flex">
           <img class="img-fluid" src="./imges/payment1.png" alt="" />
         </div>
+      </div>
+    </div>
+    <!-- Offcanvas -->
+
+    <div
+      class="w-25 offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div id="offcanvas-body" class="offcanvas-body border">
+        <ul id="Cart-list" class="text-decoration-none"></ul>
+
+        <span class="">Subtotal: $ <span id="sub-total-price"></span></span>
       </div>
     </div>
     <script src="./script.js"></script>
