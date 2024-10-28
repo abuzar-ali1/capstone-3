@@ -6,7 +6,7 @@ let productImg = document.getElementById("product-img").currentSrc;
 let proPrize = document.getElementById("product-prize").innerText;
 
 function addToCart(productImg, productName, productPrize) {
-  cart.push({ productImg, productName, proPrize });
+  cart.push({ productImg, productName, productPrize });
 
   totalPrize = totalPrize + productPrize;
 
@@ -20,9 +20,11 @@ function addToCart(productImg, productName, productPrize) {
     const img = document.createElement("img");
     img.src = productImg;
     img.style.width = "100px";
-    listItem.innerHTML = `${items.productName}  $:${productPrize}`;
     cartedProductList.appendChild(listItem);
+    listItem.innerHTML = `${items.productName}, ${items.productPrize},`;
     listItem.appendChild(img);
+    console.log(listItem);
+    
     SubTotalPrice.innerText = totalPrize;
 
   });

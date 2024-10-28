@@ -64,23 +64,44 @@
       </div>
     </section>
     <!-- header -->
+ 
     <div class="position-sticky top-0 z-3 shadow">
       <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-xl container-xxl">
+        <div class="container-xl container-xxl ">
           <a class="navbar-brand" href="#"
             ><img class="logo" src="./imges/logo-mobile.png" alt=""
           /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="d-block d-lg-none d-flex justify-content-end">
+            <button
+              class="navbar-toggler d-flex justify-content-end"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="d-flex justify-content-end">
+              <span
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              class="fs-4 mx-3 account-icon"
+              ><iconify-icon icon="bi:cart2" noobserver></iconify-icon
+            ></span>
+      
+            <a class="text-decoration-none text-secondary" href="./pages/logIn/signup.html">  <span class="fs-4 "
+              ><iconify-icon
+                icon="mdi:account"
+                noobserver
+              ></iconify-icon
+            ></span></a>
+      
+            </div>
+          </div>       
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
@@ -223,11 +244,13 @@
             </div>
           </div>
         </div>
-      </nav>
+     
+      </nav>     
     </div>
+    
 
     <!-- hero section -->
-    <section class="bg-setting">
+     <section class="bg-setting">
       <div class="container-xl container-xxl">
         <div class="row">
           <div class="col-12">
@@ -261,7 +284,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
     <!-- Our special features -->
     <section class="margin-set">
       <div class="bg-img">
@@ -493,9 +516,9 @@
         <div
           class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column justify-content-end"
         >
-          <div class="row d-flex justify-content-between">
+          <div class="row container-xxl d-flex justify-content-between">
             <button type="button" class="col-3 btn-set-5 btn fw-bold">
-              All products
+              All Products
             </button>
             <button type="button" class="col-2 btn-set-3 btn fw-bold">
               Fruits
@@ -513,8 +536,8 @@
         </div>
       </div>
     </section>
-    <!-- products -->
-    <section class="container-xl container-xxl">
+    <!-- products-->
+     <section class="container-xl container-xxl">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 p-3">
           <div class="my-container position-relative">
@@ -578,7 +601,7 @@
               >
                 <div class="text text-white position-absolute top-50 start-50">
                   <button
-                    onclick="addToCart(productImg , productName , 18)"
+                    onclick="addToCart(productImg , 'Red Apple Envy' , 18)"
                     type="button"
                     class="btn fs-6 py-2 text-white fw-bold"
                   >
@@ -833,7 +856,7 @@
     </section>
 
     <!-- Offer deadline Section -->
-    <section class="deadline-bg margin-set">
+     <section class="deadline-bg margin-set">
       <div>
         <div class="container">
           <div class="row">
@@ -884,9 +907,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
     <!-- our Farm land section -->
-    <section class="margin-set">
+     <section class="margin-set container-xxl">
+     <div class="">
       <div class="bg-img">
         <h1 class="text-center pb-5 features heading1 fw-bold">
           Our Farm Land
@@ -900,6 +924,7 @@
           message and smart incentives.
         </p>
       </div>
+     </div>
 
       <section class="container-xl container-xxl">
         <div class="row">
@@ -1054,8 +1079,8 @@
             </div>
           </div>
         </div>
-        <!-- three dots -->
-        <div class="d-flex justify-content-center">
+       <!-- three dots -->
+        <div class="d-flex justify-content-center container">
           <div class="d-flex justify-content-center">
             <span class="fs-1 dot-hover"
               ><iconify-icon icon="bi:dot" noobserver></iconify-icon
@@ -1069,10 +1094,10 @@
           </div>
         </div>
       </section>
-    </section>
+    </section> 
 
     <!-- Clients reviews -->
-    <section class="review-bg p-3">
+     <section class="review-bg p-3">
       <div class="row container-xl container-xxl">
         <div
           class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-end"
@@ -1280,10 +1305,10 @@
           ></span>
         </div>
       </div>
-    </section>
+    </section> 
 
     <!-- Footer -->
-    <div class="bg-image margin-set">
+     <div class="bg-image margin-set">
       <div class="container">
         <footer class="row py-5 mt-5 mb-1 border-top">
           <div class="col-12 col-sm-12 col-md-3 col-lg-3">
@@ -1396,8 +1421,8 @@
           </div>
         </footer>
       </div>
-    </div>
-    <div class="container">
+    </div> 
+     <div class="container">
       <div class="d-flex justify-content-between w-100">
         <p class="features heading3 fw-bold">
           © 2024 Organio - <span>Case-Theme</span>.All rights reserved.
@@ -1406,11 +1431,11 @@
           <img class="img-fluid" src="./imges/payment1.png" alt="" />
         </div>
       </div>
-    </div>
+    </div> 
     <!-- Offcanvas -->
 
     <div
-      class="w-25 offcanvas offcanvas-end"
+      class="w-50 offcanvas offcanvas-end"
       tabindex="-1"
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel"
