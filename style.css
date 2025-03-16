@@ -224,3 +224,6 @@ background-repeat: no-repeat;
   background-size: cover;
 background-repeat: no-repeat;
 }
+.width-set{
+  max-width: 20%;
+}
